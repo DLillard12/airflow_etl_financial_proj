@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17  # Use a stable version; v17 does not exist yet (as of May 2025)
+    environment:
+      POSTGRES_USER: financial_airflow_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: financial_airflow_meta
+    ports:
+      - "5432:5432"
+
+  airflow-financial:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: airflow-financial:latest
+    volumes: 
+      - ./airflow:/opt/airflow
+      - C:\file_struct\documents\programming\data\airflow_financial_project\hist:/opt/airflow/hist
+    ports: 
+      - "8080:8080"
+    command: airflow standalone
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://financial_airflow_user:password@postgres:5432/financial_airflow_meta

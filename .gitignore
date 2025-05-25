@@ -1,0 +1,10 @@
+airflow/logs/
+airflow/hist/
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/airflow-webserver.pid
+airflow/simple_auth_manager_passwords.json.generated
+airflow/standalone_admin_password.txt
+*.pyc
+__pycache__/
+.env

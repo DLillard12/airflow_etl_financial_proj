@@ -1,0 +1,6 @@
+- [ ] add a csv that tracks what has been downloaded and info about those stocks like: https://www.kaggle.com/code/jacksoncrow/download-nasdaq-historical-data
+- [ ] get a test ETL pipeline up on just SO.csv
+- [ ] Finish first load
+- [ ] finish ETL v1
+    - [ ] Finish reformat_raw_csv.py
+    - [ ] Break down the ETL into smallest dag's within reason.

@@ -11,5 +11,5 @@ dag = DAG(
 with dag:
     run_script = BashOperator(
         task_id='run_script',
-        bash_command='python /opt/airflow/dags/download_stock_data.py',
+        bash_command='python /opt/airflow/dags/daily_etl/download_stock_data.py',
     )

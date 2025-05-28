@@ -7,4 +7,4 @@ RUN apt-get update && \
     apt-get clean
 
 USER airflow
-RUN pip install yfinance pandas fastapi 
+RUN pip install yfinance pandas fastapi numpy scikit-learn

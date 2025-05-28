@@ -18,9 +18,9 @@
 
 import pandas as pd     # for manipulating the data.
 
-df = pd.read_csv('C:\\file_struct\\documents\\programming\\data\\airflow_financial_project\\hist\\so.csv',skiprows=2)
+df = pd.read_csv('C:\\file_struct\\documents\\programming\\data\\airflow_financial_project\\hist\\spy.csv',skiprows=2)
 
 
 df.columns = ['Date','Close','High','Low','Open','Volume']
 
-df.to_csv('C:\\file_struct\\documents\\programming\\data\\airflow_financial_project\\hist\\processed_raw\\so_raw.csv')
+df.to_csv('C:\\file_struct\\documents\\programming\\data\\airflow_financial_project\\hist\\processed_raw\\spy_raw.csv')
